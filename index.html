@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="heading-left">
+          <p class="arr-input">size of the array</p>
+          <input
+            type="range"
+            id="arr-size"
+            min="20"
+            max="150"
+            step="1"
+            value="80"
+          />
+          <p class="arr-input">speed of the algorithm</p>
+          <input
+            type="range"
+            id="arr-speed"
+            min="1"
+            max="5"
+            step="1"
+            value="3"
+          />
+          <button id="arr-generate">Generate new array!</button>
+        </div>
+        <div class="heading-right">
+          <h2 class="heading-title">Sorting visualizer</h2>
+          <div class="algos">
+            <button class="algo">Bubble</button>
+            <button class="algo">Selection</button>
+            <button class="algo">Insertion</button>
+            <button class="algo">Merge</button>
+            <button class="algo">Heap</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="compl-time">
+        <h3>Time complexity</h3>
+        <div class="time-comp">
+          <div class="pair-def">
+            <p class="sub-heading">Worst Case:</p>
+            <p id="time-worst"></p>
+          </div>
+          <div class="pair-def">
+            <p class="sub-heading">Average Case:</p>
+            <p id="time-avg"></p>
+          </div>
+          <div class="pair-def">
+            <p class="sub-heading">Best Case:</p>
+            <p id="time-best"></p>
+          </div>
+        </div>
+      </div>
+      <div class="array_container"></div>
+      <div class="compl-space">
+        <h3>Space complexity</h3>
+        <div class="space-comp">
+          <div class="pair-def">
+            <p class="sub-heading">Worst case:</p>
+            <p id="space-worst"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script defer src="scripts/index.js"></script>
+  </body>
+</html>
