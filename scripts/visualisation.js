@@ -1,5 +1,5 @@
 let speed = 1000;
-arraySpeed.addEventListener("input", visualiseSpeed);
+
 const visualiseSpeed = function () {
   let arrspeed = arraySpeed.value;
   switch (parseInt(arrspeed)) {
@@ -23,16 +23,17 @@ const visualiseSpeed = function () {
 };
 let delayTime = 10000 / (Math.floor(size / 10) * speed);
 let delay = 0;
+arraySpeed.addEventListener('input', visualiseSpeed);
 const divUpdate = function (cont, height, color) {
   window.setTimeout(function () {
     cont.style =
-      "margin: 0% 0.1%; width:" +
+      'margin: 0% 0.1%; width:' +
       (100 / size - 2 * 0.1) +
-      "%; height:" +
+      '%; height:' +
       height +
-      "%; background-color:" +
+      '%; background-color:' +
       color +
-      ";";
+      ';';
   }, (delay += delayTime));
 };
 const enableButtons = function () {
