@@ -23,5 +23,10 @@ const Insertion = function () {
       i -= 1;
     }
     divSize[i + 1] = key;
+    for (let t = 0; t < j; t++) {
+      divUpdate(divs[t], divSize[t], 'green');
+    }
   }
+  divUpdate(divs[j - 1], divSize[j - 1], 'green');
+  enableButtons();
 };
