@@ -10,7 +10,7 @@ const Insertion = function () {
     let i = j - 1;
     while (i >= 0 && divSize[i] > key) {
       divUpdate(divs[i], divSize[i], 'red');
-      divUpdate(divs[i + 1].divSize[i + 1], 'red');
+      divUpdate(divs[i + 1], divSize[i + 1], 'red');
       divSize[i + 1] = divSize[i];
       divUpdate(divs[i], divSize[i], 'red');
       divUpdate(divs[i + 1], divs[i + 1], 'red');

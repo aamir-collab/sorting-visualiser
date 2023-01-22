@@ -27,11 +27,12 @@ const merge_sort = function (start, mid, end) {
       divUpdate(divs[q - 1], divSize[q - 1], 'red');
     }
   }
-  for (let t = 0; t < k; t++) {
-    divSize[start++] = arr[t];
+  for (let m = 0; m < k; m++) {
+    divSize[start++] = arr[m];
     divUpdate(divs[start - 1], divSize[start - 1], 'green');
   }
 };
+
 const merge_partition = function (start, end) {
   if (start < end) {
     let mid = Math.floor((start + end) / 2);
